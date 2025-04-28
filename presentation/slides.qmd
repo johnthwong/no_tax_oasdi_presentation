@@ -1,0 +1,199 @@
+---
+title: "Not Taxing Social Security: Implications and Lack of Good Pay-For's"
+author: "John T.H. Wong"
+format: 
+  beamer:
+    theme: default
+    include-in-header: 
+      text: |
+        \setbeamertemplate{footline}[frame number]
+---
+
+# Agenda
+1. The fundamental problem of retirement spending.
+2. The impact of not taxing social security:
+    - Fiscal.
+    - Distributional.
+    - Complexity. 
+3. "Taxing payroll taxes" as a pay-for.
+4. The issues of taxing payroll taxes:
+    - Insufficient.
+    - Distributionally worse.
+    - Unintuitive. \pause
+    
+## Takeaways
+1. Not taxing social security is fiscally bad.
+2. Paying for it is distributionally bad.
+
+# The fundamental problem of retirement spending
+- The demographics makes the financing challenging.
+- There are 2.7 working adults/elderly (SSA 2024). 
+  - Down from a 3.2-3.4 historically. \pause
+  - This is driven by both mediocre growth in the nominator and high growth in the denominator. \pause
+- One way to see elderly population growth is to look at the fastest growing (not shares) of the federal expenditures over the next 30 years (CBO 2025).
+  - Medicare: 385%
+  - Social security: 241%.
+  - Medicaid: 219%.
+  - Rest of expenditures: 197%.
+
+# Not taxing social security (benefits): what does it mean?
+- Payroll "taxes" for social security and Medicare are **not** taxes, but rather contributions. 
+  - And they are taken out of your paycheck pre-tax, i.e., before you are subject to income tax. \pause
+  - So when you withdraw at old age as benefits, those get taxed. \pause
+- So benefits are treated as income for taxation purposes, in the following manner:
+  - Income tax is calculated on 50% of benefits, if total income is below $25,000.
+    - This revenue goes to the Social Security trust fund. \pause
+  - Income tax is calculated on 85% of benefits, if total income is above $25,000. 
+    - The revenue generated from the additional 35% of benefits considered goes to the Medicare trust fund. \pause
+- The fiscal implication is that a tax on social security benefits is that it reduces the net amount of retirement spending.
+  - And alleviates the fundamental problem of retirement spending. \pause
+- **Not taxing social security means setting both of those rates to zero.**
+
+# Not taxing social security: fiscal impact
+
+The following estimates from a simulation of the US economy with PolicyEngine:
+
+\pause
+
+```{r}
+#| results: asis
+
+library(tidyverse)
+score_1 = read.csv("scores/no_tax_on_oasdi.csv") %>%
+  rename(
+    "Savings (\\$bn)" = surplus
+  )
+
+gen_table <- function(df){
+  knitr::kable(
+    t(df),
+    format = "latex",
+    booktabs = TRUE,
+    digits = 0,
+    escape = FALSE
+  ) %>%
+  kableExtra::kable_styling(
+    font_size = 12, 
+    latex_options = "hold_position",
+    position = "left"
+    )
+}
+
+gen_scores <- function(score){
+  df = score %>% select("Savings (\\$bn)")
+  rownames(df) = score$year
+  
+  df_1 <- df %>% slice(1:5)
+  df_2 <- df %>% slice(6:11)
+  print(gen_table(df_1))
+  print(gen_table(df_2))
+}
+
+gen_scores(score_1)
+```
+
+The policy costs $1.3 trillion over ten years.
+
+# Not taxing social security: distributional impact by income
+
+![](img/Screenshot 2025-04-28 at 13.14.10.png)
+
+# Not taxing social security: distributional impact by age
+
+![](img/Screenshot 2025-04-28 at 13.14.36.png)
+
+# Not taxing social security: impact on tax complextiy
+- Not taxing social security will make taxes more complicated. \pause
+- It's somewhat convoluted but bear with me: \pauses
+  - For the tax bill to pass the Senate with 51 votes only, the Senate must undergo the "reconciliation" procedure. \pause
+  - Senate rules forbid using reconciliation to change social security. \pause
+  - Thus, any changes to the tax on social security benefits cannot be made by changing existing law's parameters. \pause
+- Thus, any reduction of the elderly's tax burden must come from a separate credit that is calculated based the tax you are about to pay.
+  - This design has been confirmed by House Ways and Means Committee Chairman, Jason Smith. \pause
+- In practice, this means when you do your taxes,
+  - You have to first calculate how much taxes you owe on your social security benefits.
+  - And then calculate how much credit you get based on the tax you owe.
+
+# Potential solution: taxing payroll taxes
+- Recall that the law considers the payroll taxes you pay to be contributions.\pause
+- Half of contributions are paid for by employers. \pause
+  - By that logic, employers' payroll taxes are actually extra income you're earning, that you immediately transfer into a retirement fund. \pause
+  - And that income is currently untaxed. \pause
+  - So we should add that amount to your amount of taxable income. \pause
+- There are two combinations of policies proposed:
+    1. Tax all employer payroll contributions as employee's additional income; exempt all social security benefits from taxation. \pause
+    2. Tax only employer's *Medicare* payroll contributions as employee's additional income; \pause set only the additional share of benefits subject to tax, to 0% (recall that it's currently at 35%; revenue goes to Medicare fund).
+    
+# Fiscal impact
+
+## Option 1 does lead to a surplus
+
+```{r}
+#| results: asis
+
+score = read.csv("scores/crfb_reform_scores_all_fica.csv") %>%
+  mutate(
+    year = as.numeric(year),
+    revenue = round(revenue/1e9, 1)
+    ) %>%
+  rename(
+    "Savings (\\$bn)" = revenue
+  ) 
+
+score[11, "year"] = "Ten year"
+
+gen_scores(score)
+```
+\pause
+
+## Option 2 does not add up at all
+
+```{r}
+#| results: asis
+
+score = read.csv("scores/crfb_reform_scores_medicare.csv") %>%
+  mutate(
+    year = as.numeric(year),
+    revenue = round(revenue/1e9, 1)
+    ) %>%
+  rename(
+    "Savings (\\$bn)" = revenue
+  ) 
+
+score[11, "year"] = "Ten year"
+
+gen_scores(score)
+```
+
+# Distribtuional impact of option 1, by income
+
+![](img/Screenshot 2025-04-28 at 13.22.47.png){width=80% fig-align="center"} 
+
+# Distribtuional impact of option 1, by age
+
+![](img/Screenshot 2025-04-28 at 13.23.20.png){width=60% fig-align="center"} 
+
+- Redistribution accrues exclusively to the elderly, at the cost of poverty among workers and children. \pause
+- Note that taxing payroll contributions is identical to a flat tax, so this distributional pattern is something that most revenue proposals will entail
+
+# Is taxing payroll "contributions" sensible?
+
+- When your pre-tax income is reduced by payroll contributions, does *anyone* think of it as saved income rather than as a tax? \pause
+- Intuition fits accounting treatment:
+    - In modeling, we treat any money going to the government as public revenue, not private savings. \pause
+- Intuition fits reality:
+    - The amount paid into social security and Medicare do not map one-to-one to how much you take out. \pause
+    - In fact, the government has taken money out of the trust funds to finance general expenditures before, so the payroll contributions aren't really stored in a separate pot of money.
+- So taxing payroll contributions will be very unintuitive to taxpayers, to say the least.
+    
+# Is taxing social security benefits sensible in the first place?
+- I must admit this is probably why a tax on social security benefits is so odd. \pause 
+- Intuitively and economically, government payments are part of the tax-and-transfer system, and therefore *post-tax*. \pause
+  - But the law treats this class of payment as pre-tax, which clashes with intuition and output accounting. \pause
+- Instead of paying people a benefit and then taking it away, I think it's simpler and more honest to just reduce the benefit paid upfront.
+
+# Conclusion
+- Just removing the tax and not reducing the gross benefit is worse than the current regime for fiscal reasons. \pause
+  - Refunding people after they pay the tax, after you pay them the benefit, is even worse, for fiscal and complexity reasons! \pause
+- Removing the tax and taxing workers more is fiscally better but worse for age-distributional and complexity reasons.
+  
