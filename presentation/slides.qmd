@@ -11,11 +11,12 @@ format:
 
 # Agenda
 1. The fundamental problem of retirement spending.
-2. The impact of not taxing social security:
+2. How is social security taxed.
+3. The impact of not taxing social security:
     - Fiscal.
     - Distributional.
-3. "Taxing payroll taxes" as a pay-for.
-4. The issues of taxing payroll taxes:
+4. "Taxing payroll taxes" as a pay-for.
+5. The issues of taxing payroll taxes:
     - Fiscal.
     - Distributional.
     - Intuitiveness. \pause
@@ -28,18 +29,18 @@ format:
 - The demographics makes the financing challenging.
 - There are 2.7 working adults/elderly (SSA 2024). 
   - Down from a 3.2-3.4 historically. \pause
-  - This is driven by both mediocre growth in the nominator and high growth in the denominator. \pause
-- One way to see elderly population growth is to look at the fastest growing (not shares) of the federal expenditures over the next 30 years (CBO 2025).
+- Another way to see elderly population growth is to look at the fastest growing (not shares) of the federal expenditures over the next 30 years (CBO 2025). \pause
   - Medicare: 385%
   - Social security: 241%.
   - Medicaid: 219%.
   - Rest of expenditures: 197%.
 
 # Not taxing social security (benefits): what does it mean?
-- Payroll "taxes" for social security and Medicare are **not** taxes, but rather contributions. 
-  - And they are taken out of your paycheck pre-tax, i.e., before you are subject to income tax. \pause
+\pause
+- We need to start with payroll "taxes" (for social security and Medicare), which are **not** taxes, but rather contributions. \pause
+  - Technically, you contribute out of your paycheck pre-tax, i.e., before you are subject to income tax. \pause
   - So when you withdraw at old age as benefits, those get taxed. \pause
-- So benefits are treated as income for taxation purposes, in the following manner:
+- Benefits are treated as income for taxation purposes, in the following manner:
   - Income tax is calculated on 50% of benefits, if total income is below $25,000.
     - This revenue goes to the Social Security trust fund. \pause
   - Income tax is calculated on 85% of benefits, if total income is above $25,000. 
@@ -50,7 +51,10 @@ format:
 
 # Not taxing social security: fiscal impact
 
-The following estimates from a simulation of the US economy with PolicyEngine:
+The following estimates from a simulation of the US economy with PolicyEngine, which: 
+- Apply federal and state tax and benefit rules to representative samples of the population.
+- Calculate outcomes for each household based on their unique characteristics.
+- Aggregate results to estimate population-wide impacts.
 
 \pause
 
@@ -171,7 +175,7 @@ gen_scores(score)
     - In modeling, we treat any money going to the government as public revenue, not private savings. \pause
 - Intuition fits reality:
     - The amount paid into social security and Medicare do not map one-to-one to how much you take out. \pause
-    - In fact, the government has taken money out of the trust funds to finance general expenditures before, so the payroll contributions aren't really stored in a separate pot of money.
+    - In fact, the government has taken money out of the trust funds to finance general expenditures before, so the payroll contributions aren't really stored in a separate pot of money. \pause
 - So taxing payroll contributions will be very unintuitive to taxpayers, to say the least.
     
 # Is taxing social security benefits sensible in the first place?
