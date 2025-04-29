@@ -15,7 +15,7 @@ format:
 3. The impact of not taxing social security:
     - Fiscal.
     - Distributional.
-4. "Taxing payroll taxes" as a pay-for.
+4. How does "taxing payroll taxes" work.
 5. The issues of taxing payroll taxes:
     - Fiscal.
     - Distributional.
@@ -106,7 +106,7 @@ The policy costs $1.3 trillion over ten years.
 ![](img/Screenshot 2025-04-28 at 13.14.36.png)
 
 # Potential solution: taxing payroll taxes
-\pause
+- To pay for not taxing social security benefits, some have suggested taxing payroll taxes instead. What does that mean? \pause
 - Recall that the law considers the payroll taxes you pay to be contributions.
 - Half of contributions are paid for by employers. \pause
   - By that logic, employers' payroll taxes are actually extra income you're earning, that you immediately transfer into a retirement fund. \pause
@@ -168,23 +168,13 @@ gen_scores(score)
 - Redistribution accrues exclusively to the elderly, at the cost of poverty among workers and children. \pause
 - Note that taxing payroll contributions is identical to a flat tax, so this distributional pattern is something that most revenue proposals will entail
 
-# Is taxing payroll "contributions" sensible?
+# Is taxing payroll "contributions" consistent with intuition?
 
-- When your pre-tax income is reduced by payroll contributions, does *anyone* think of it as saved income rather than as a tax? \pause
+- When your pre-tax income is reduced by payroll contributions, do you think of it as saved income rather than as a tax? \pause
 - Intuition fits economic treatment:
     - In modeling, we treat any money going to the government as public revenue, not private savings. \pause
 - Intuition fits reality:
     - The amount paid into social security and Medicare do not map one-to-one to how much you take out. \pause
-    - In fact, the government has taken money out of the trust funds to finance general expenditures before, so the payroll contributions aren't really stored in a separate pot of money. \pause
-- So taxing payroll contributions will be very unintuitive to taxpayers, to say the least.
-    
-# Is taxing social security benefits sensible in the first place?
-- But is a social security benefits any less odd? \pause 
-- Intuitively and economically, government payments are part of the tax-and-transfer system, and therefore *post-tax*.
-  - But the law treats this class of payment as pre-tax. \pause
-- Instead of paying people a benefit and then taking it away, I think it's simpler and more honest to just reduce the benefit paid upfront.
-
-# Conclusion
-- Just removing the tax and not reducing the gross benefit is worse than the current regime for fiscal reasons. \pause
-- Removing the tax and taxing workers more is fiscally better but worse for age-distributional reasons.
+    - In fact, the government has taken money out of the trust funds to finance general expenditures before, so the payroll contributions aren't really stored the same way like a retirement fund. \pause
+- So I expect taxing payroll contributions will be very unintuitive to taxpayers, to say the least, if not very unpopular.
   
