@@ -41,7 +41,7 @@ The analysis finds that not taxing Social Security benefits is fiscally irrespon
 
 ## The Fundamental Problem of Retirement Spending
 
-Demographic trends make financing old-age entitlements increasingly difficult. The ratio of working-age adults per elderly person has fallen from 3.2 historically to just 2.7 today, and is projected to fall to 2.4 by 2040 [@oasdi2024]. Concurrently, spending growth for entitlement programs far outpaces revenue growth. Over the next 30 years [@cbo2025]:
+Demographic trends make financing old-age spending increasingly difficult. The ratio of working-age adults per elderly person has fallen from 3.2 historically to just 2.7 today, and is projected to fall to 2.4 by 2040 [@oasdi2024]. Concurrently, spending growth for retirement programs far outpaces revenue growth. Over the next 30 years [@cbo2025]:
 
 -   **Medicare** is projected to grow **5.4%** per year.
 -   **Social Security** by **4.2%**.
@@ -63,7 +63,7 @@ Payroll taxes for Social Security and Medicare are legally considered to be cont
 -   An **additional 35% of benefits** are taxable as ordinary income for individuals with combined income above **\$25,000**.
     -   Revenue is allocated to the Medicare Trust Fund.
 
-This taxation partially offsets entitlement outlays in retirement and moderates net federal spending on elderly benefits.
+This taxation partially offsets net federal spending on elderly benefits.
 
 ## Eliminating Social Security Benefit Taxes
 
@@ -235,7 +235,7 @@ Eliminating taxation of Social Security benefits would significantly worsen fede
 
 ## Recommendation {.unnumbered}
 
-Policymakers should reject proposals to exempt Social Security benefits from taxation and maintain current law to help stabilize entitlement finances and avoid exacerbating fiscal imbalances.
+Policymakers should reject proposals to exempt Social Security benefits from taxation and maintain current law to help slow the growth in retirement spending and avoid exacerbating federal debt burdens.
 
 \newpage
 
