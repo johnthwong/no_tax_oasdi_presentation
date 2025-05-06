@@ -43,14 +43,14 @@ The analysis finds that not taxing Social Security benefits is fiscally irrespon
 
 Demographic trends make financing old-age entitlements increasingly difficult. The ratio of working-age adults per elderly person has fallen from 3.2 historically to just 2.7 today, and is projected to fall to 2.4 by 2040 [@oasdi2024]. Concurrently, spending growth for entitlement programs far outpaces revenue growth. Over the next 30 years [@cbo2025]:
 
--   **Medicare** is projected to grow **5.4%** per year
--   **Social Security** by **4.2%**
--   **Tax revenue** by only **4.1%**
+-   **Medicare** is projected to grow **5.4%** per year.
+-   **Social Security** by **4.2%**.
+-   **Tax revenue** by only **4.1%**.
 
 This phenomenon is not shared by other federal spending categories:
 
--   **Medicaid, CHIP, and ACA subsidies** are projected to grow **3.9%** per year
--   **Rest of expenditures** by **3.7%**
+-   **Medicaid, CHIP, and ACA subsidies** are projected to grow **3.9%** per year.
+-   **Rest of expenditures** by **3.7%**.
 
 The demographic imbalance is fundamental to retirement spending programs. Thus, they are particularly unsustainable and are the main drivers of a deteriorating fiscal outlook.
 
@@ -106,7 +106,7 @@ gen_scores <- function(score){
 gen_scores(score_1)
 ```
 
-A simulation using **PolicyEngine** estimates the fiscal cost of exempting all Social Security benefits from taxation at approximately **\$1.3 trillion over ten years**.[^1] Given that the government is projected to add \$21 trillion of debt over the coming decade even without policy changes [@cbo2025], this proposal would grow the amount borrowed by an additional 6%. The loss of revenue exacerbates fiscal imbalances driven by retirement spending.
+A simulation made using @pengine estimates the fiscal cost of exempting all Social Security benefits from taxation at approximately **\$1.3 trillion over ten years**.[^1] Given that the government is projected to add \$21 trillion of debt over the coming decade even without policy changes [@cbo2025], this proposal would grow the amount borrowed by an additional 6%. The loss of revenue exacerbates fiscal imbalances driven by retirement spending.
 
 [^1]: PolicyEngine generates these estimates via microsimulation. This means applying federal and state tax and benefit rules to representative samples of the population, calculating outcomes for each household based on their unique characteristics, and aggregating results to estimate population-wide impacts. Note that all revenue and expenditure estimates are static rather than dynamic. That means they do not account for behavioral changes, particularly labor supply adjustments, in response to changes in tax and benefit policies.
 
@@ -114,7 +114,7 @@ A simulation using **PolicyEngine** estimates the fiscal cost of exempting all S
 
 #### By Income
 
-The increase in net income will be distributed across the income spectrum, with most income groups seeing a relative increase in net income. The increase is particularly high among upper-middle income payers, demonstrating that the most-taxed Social Security beneficiaries are relatively high-earning, even compared to the average worker:
+The increase in net income will be distributed across the income spectrum, with most income groups seeing a relative increase in net income. The increase is particularly high among upper-middle income payers, demonstrating that the most-taxed Social Security beneficiaries are relatively high-earning, even compared to the average worker.
 
 Eliminating taxation of benefits disproportionately benefits higher-income households, as shown below:
 
@@ -130,9 +130,9 @@ Younger cohorts — who do not yet receive benefits — bear no direct benefit, 
 
 Any bill to exempt Social Security benefits will very likely be passed by the GOP on a party line vote. This will require the use of the Senate's reconciliation procedure, such that only 51 votes are necessary for passage. However, changes to Social Security, including the taxation of its benefits, are banned under the rules of the reconciliation procedure. Thus, any bill to legislate the exemption of benefits cannot be a parametric reform that sets the aforementioned rates to 0%. Instead, the tax on benefits will still be levied, but that will be offset by a new tax relief program aimed at seniors. This policy design has been confirmed by House Ways and Means Chairman Jason Smith [@aei2025].
 
-This design will add further complexities to tax filing. It will be challenging to set the relief amount to be equal to the tax on benefits, since benefits are taxed as if it is ordinary income.[^2]
+This design will add further complexities to tax filing. It will be challenging to set the relief amount to be equal to the tax on benefits, since benefits are pooled with other sources of income and taxed at marginal rates.[^2]
 
-[^2]: For a challenging example, consider a case where a taxpayer who would be taxed at a lower bracket if they had no benefits. It will be difficult to determine whether to attribute beneficiary's benefits or non-benefit income to the higher rate, which makes computing a taxpayer-specific relief amount impossible.
+[^2]: For a challenging example, consider cases where a taxpayer who would be taxed at a lower bracket if they had no benefits. In any given individual's case, it will be difficult to determine whether to attribute the higher rate to the taxpayer's Social Security benefits, or their non-benefit income. The law can be written to make this call arbitrarily. If the law decides to treat all benefits as the last margin of income, that will maximize the relief amount to seniors. But this will overpay taxpayers for whom the non-benefit income is the actual last margin income. This would be the case if, for example, a taxpayer started working a job after forming an expectation of what their benefit amount will be.
 
 Thus, under any exemption regime, elderly filers will have to first compute the tax owed on benefits, and then the relief amount in a separate procedure. This will:
 
@@ -209,17 +209,25 @@ When we segment the population by age, we can more clearly see that the small re
 
 ![](img_capless/fica_option_age.png){width=`r figsize` fig-align="center"}
 
-Taxing payroll contributions to pay for exempting benefit taxation does two things: (i) the policy increases net benefits received by retirees, while (ii) putting the financing burden on working-age adults and families by increasing their tax liability. This combination of policies reduces elderly poverty, but at the cost of increased poverty among working-age adults and children.
+Taxing payroll contributions to pay for exempting benefit taxation does two things: (i) the policy increases net benefits received by retirees, while (ii) putting the financing burden on working-age adults and families by increasing their tax liability. This combination of policies does reduce elderly poverty, but at the cost of increased poverty among working-age adults and children. 
 
-However, this distributional pattern will be similar for any proposal to pay for benefit exemption. This is because taxing payroll contributions is economically similar to a generic progressive tax.[^3] Any alternative revenue proposal will have the same, if not worse, impact on the net income of poor working age adults and children.
+Also note that while the reduction in elderly poverty is larger in magnitude than the increase among working-age adults and children, this should be interpreted cautiously for the following reasons:
+
+1. The households who will pay more taxes are by definition employed---since they are receiving employer payroll contributions. Thus, they are at lower risk of falling into poverty---but that does not imply they are not impacted by the tax increase.
+2. Spending on elderly tends to generate far lower social welfare than spending on children [@hendren_unified_2020], so putting the latter in greater poverty for lifting the former poses a complicated tradeoff that defies easy comparison.
+3. As noted earlier, much of the increase in net income attributable to exempting benefits from taxation accrues to higher income households. Thus, the poverty reduction among seniors reflects only a narrow picture of the program's overall impact.
+
+Finally, note that this proposal's adverse impact on younger age groups will be shared by any proposal to pay for benefit exemption. This is because taxing payroll contributions is economically similar to a generic progressive tax.[^3] Any alternative revenue proposal will have the same, if not worse, impact on the net income of poor working-age adults and children.
 
 [^3]: Payroll contributions are levied similarly to a flat tax, in that all workers contribute (almost) the same share of income. Subjecting payroll contributions to ordinary income tax rates, which increases by income, will scale this flat rate downwards for lower earners. Thus, the resulting additional share of income taxed will increase by income, which is by definition progressive.
 
 ### Practical Considerations
 
-Moreover, this policy is likely to be unintuitive and politically unpopular. Payroll contributions are widely perceived as a tax, not earmarked savings for retirement. Popular perception lines up with economic definitions, under which payroll deductions are considered a source of government revenue. It is also consistent with political reality, since contributions neither correspond directly to eventual benefits, nor are contributions insulated from government's general budget.
+Moreover, this policy is likely to be unintuitive and politically unpopular. Payroll contributions are widely perceived as a tax, not earmarked savings for retirement. Popular perception lines up with economic definitions, under which payroll deductions are considered a source of government revenue. It is also consistent with political reality, since contributions neither correspond directly to eventual benefits, nor are contributions insulated from government's general budget.[^4]
 
-Thus, taxpayers may be skeptical of the characterization of contributions as taxable income, and instead perceive the new liability as a tax on a tax.
+[^4]: In years when payroll contributions exceed benefit payments, the Treasury withdraws trust fund balances to finance general government expenditures [@oasdi2024]. While the trust funds have been drawing on general government revenue in recent years, the fact is that the finances of the trust funds and the general budget are far less segregated than the structure implied by separate payroll contributions for Social Security and Medicare.
+
+Thus, taxpayers may be skeptical of the characterization of contributions as taxable income, and instead perceive that they are being taxed for paying a tax.
 
 ## Conclusion
 
