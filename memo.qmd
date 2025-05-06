@@ -52,7 +52,7 @@ This phenomenon is not shared by other federal spending categories:
 -   **Medicaid, CHIP, and ACA subsidies** are projected to grow **3.9%** per year.
 -   **Rest of expenditures** by **3.7%**.
 
-The demographic imbalance is fundamental to retirement spending programs. Thus, they are particularly unsustainable and are the main drivers of a deteriorating fiscal outlook.
+Worsening demographic trends make retirement spending programs particularly unsustainable. These programs have been and will be the main drivers of a deteriorating fiscal outlook.
 
 ## How Social Security Benefits Are Currently Taxed
 
@@ -106,7 +106,7 @@ gen_scores <- function(score){
 gen_scores(score_1)
 ```
 
-A simulation made using @pengine estimates the fiscal cost of exempting all Social Security benefits from taxation at approximately **\$1.3 trillion over ten years**.[^1] Given that the government is projected to add \$21 trillion of debt over the coming decade even without policy changes [@cbo2025], this proposal would grow the amount borrowed by an additional 6%. The loss of revenue exacerbates fiscal imbalances driven by retirement spending.
+A simulation made using @pengine estimates the fiscal cost of exempting all Social Security benefits from taxation at approximately **\$1.3 trillion over ten years**.[^1] Given that the government is projected to add \$21 trillion of debt over the coming decade even without policy changes [@cbo2025], this proposal would grow the amount borrowed by an additional 6%. The loss of revenue exacerbates deficits and increases debt growth.
 
 [^1]: PolicyEngine generates these estimates via microsimulation. This means applying federal and state tax and benefit rules to representative samples of the population, calculating outcomes for each household based on their unique characteristics, and aggregating results to estimate population-wide impacts. Note that all revenue and expenditure estimates are static rather than dynamic. That means they do not account for behavioral changes, particularly labor supply adjustments, in response to changes in tax and benefit policies.
 
