@@ -35,13 +35,13 @@ Recent proposals to eliminate federal income taxation of Social Security benefit
 -   The viability of a proposed pay-for: taxing payroll contributions as employee income.
 -   The practical and intuitive challenges posed by such a pay-for.
 
-The analysis finds that not taxing Social Security benefits is fiscally irresponsible and disproportionately benefits retirees. Alternative funding mechanisms introduce substantial distributional tradeoffs and are unlikely to be politically palatable.
+The analysis finds that not taxing Social Security benefits is fiscally irresponsible and disproportionately benefits retirees. Alternative funding mechanisms introduce substantial distributional tradeoffs and are unlikely to be politically palatable. Policymakers should maintain current law and reject proposals to exempt Social Security benefits from taxation.
 
 ------------------------------------------------------------------------
 
 ## The Fundamental Problem of Retirement Spending
 
-Demographic trends make financing old-age spending increasingly difficult. The ratio of working-age adults per elderly person has fallen from 3.2 historically to just 2.7 today, and is projected to fall to 2.4 by 2040 [@oasdi2024]. Concurrently, spending growth for retirement programs far outpaces revenue growth. Over the next 30 years [@cbo2025]:
+Demographic trends make financing old-age spending increasingly difficult. The ratio of working-age adults per elderly person has fallen from 3.2 historically to just 2.7 today, and is projected to fall to 2.4 by 2040 [@oasdi2024]. As a result, spending growth for retirement programs far outpaces revenue growth. Over the next 30 years [@cbo2025]:
 
 -   **Medicare** is projected to grow **5.4%** per year.
 -   **Social Security** by **4.2%**.
@@ -116,13 +116,13 @@ A simulation made using @pengine estimates the fiscal cost of exempting all Soci
 
 The increase in net income will be distributed across the income spectrum, with most income groups seeing a relative increase in net income. The increase is particularly high among upper-middle income payers, demonstrating that the most-taxed Social Security beneficiaries are relatively high-earning, even compared to the average worker.
 
-Eliminating taxation of benefits disproportionately benefits higher-income households, as shown below:
+Eliminating taxation of benefits particularly benefits higher-income households, as shown below:
 
 ![](img_capless/no_tax_oasdi_option_relative.png){width=`r figsize` fig-align="center"}
 
 #### By Age
 
-Younger cohorts — who do not yet receive benefits — bear no direct benefit, while elderly households receive the full windfall:
+Younger cohorts---who do not yet receive benefits---bear no direct benefit, while elderly households receive the full windfall:
 
 ![](img_capless/no_tax_oasdi_option_age.png){width=`r figsize` fig-align="center"}
 
@@ -235,7 +235,7 @@ Eliminating taxation of Social Security benefits would significantly worsen fede
 
 ## Recommendation {.unnumbered}
 
-Policymakers should reject proposals to exempt Social Security benefits from taxation and maintain current law to help slow the growth in retirement spending and avoid exacerbating federal debt burdens.
+Policymakers should reject proposals to exempt Social Security benefits from taxation and maintain current law to help slow the growth of retirement spending and avoid exacerbating federal debt burdens.
 
 \newpage
 
